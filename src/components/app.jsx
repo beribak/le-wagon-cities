@@ -2,8 +2,9 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="app">
-      <p>React + Redux starter</p>
+    <div className="app row">
+    	<cityList className="col-sm-4" />
+    	<city className="col-sm-8" />      
     </div>
   );
 };
