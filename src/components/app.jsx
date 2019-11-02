@@ -7,7 +7,9 @@ const App = () => {
   return (
     <div className="app row">
     	<CityList className="col-sm-4" />
-    	<City className="col-sm-8" />      
+    	<div className="col-sm-8">
+    		<City />      
+    	</div>
     </div>
   );
 };

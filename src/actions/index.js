@@ -6,3 +6,10 @@ export function setCities() {
 		payload: cities 
 	};
 }
+
+export function selectCity(city) {
+	return{
+		type: 'SET_CITIES',
+		payload: city 
+	};
+}
