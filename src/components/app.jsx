@@ -1,13 +1,13 @@
 import React from 'react';
 
-import city from '../containers/city';
-import city from '../containers/city';
+import City from '../containers/city';
+import CityList from '../containers/city_list';
 
 const App = () => {
   return (
     <div className="app row">
-    	<cityList className="col-sm-4" />
-    	<city className="col-sm-8" />      
+    	<CityList className="col-sm-4" />
+    	<City className="col-sm-8" />      
     </div>
   );
 };

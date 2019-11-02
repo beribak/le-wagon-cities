@@ -1,4 +1,4 @@
-import cities from '../cities.js';
+import cities from '../cities';
 
 export function setCities() {
 	return{
