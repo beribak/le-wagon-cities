@@ -10,8 +10,8 @@ import '../assets/stylesheets/application.scss';
 
 // State and reducers
 const reducers = combineReducers({
-  cities: cityList,
-  selectedCity: selectedCity
+  cities: cityListReducer,
+  selectedCity: selectedCityReducer
 });
 
 // render an instance of the component in the DOM

@@ -1,5 +1,8 @@
 import React from 'react';
 
+import city from '../containers/city';
+import city from '../containers/city';
+
 const App = () => {
   return (
     <div className="app row">
