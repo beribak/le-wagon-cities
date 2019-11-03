@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+// import { selectCity } from '../actions';
 
 const ActiveCity = (props) => {
   if (!props.activeCity) {

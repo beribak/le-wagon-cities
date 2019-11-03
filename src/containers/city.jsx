@@ -25,10 +25,10 @@ class City extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({
-		selectCity,
+	return bindActionCreators(
+		{ selectCity },
 		dispatch
-	});
+	);
 }
 
 // function mapStateToProps(state) {
