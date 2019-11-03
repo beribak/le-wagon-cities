@@ -17,7 +17,7 @@ class App extends Component {
 	  return (
 	    <div className="row">
 	    	<CityList className="col-sm-4" />
-	    	<ActiveCity className="col-sm-4" />     
+	    	<ActiveCity className="col-sm-8" />     
 	    </div>
 	  );
 	}
