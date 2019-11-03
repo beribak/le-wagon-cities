@@ -12,7 +12,7 @@ import selectedCityReducer from './reducers/selected_city_reducer';
 // internal modules
 import App from './components/app';
 
-// State and reduucers
+// State and reducers
 const reducers = combineReducers({
   cities: setCitiesReducer,
   selectedCity: selectedCityReducer
@@ -20,7 +20,7 @@ const reducers = combineReducers({
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  <Provider store={createStore(reducers)} className="container">
     <App />
   </Provider>,
   document.getElementById('root')

@@ -8,14 +8,14 @@ import { selectCity } from '../actions';
 class City extends Component {
 
 	handleClick = () => {
-		this.props.selectCity();
+		this.props.selectCity(this.props.city);
 	}
 
 	render() {
 
 		if (this.props.city)
 			return(
-				<div className="card" onClick={this.handleClick} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/${this.props.city.slug}')` }}>
+				<div className="card" onClick={this.handleClick} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://kitt.lewagon.com/placeholder/cities/${this.props.city.slug}')` }}>
 					<h2>{this.props.city.name}</h2>
 					<h5>{this.props.city.address}</h5>
 				</div>
@@ -31,10 +31,10 @@ function mapDispatchToProps(dispatch) {
 	});
 }
 
-function mapStateToProps(state) {
-	return {
-		// city: state.selectedCity
-	};
-}
+// function mapStateToProps(state) {
+// 	return {
+// 		// city: state.selectedCity
+// 	};
+// }
 
-export default connect(mapDispatchToProps, mapStateToProps)(City);
+export default connect(null, mapDispatchToProps)(City);
