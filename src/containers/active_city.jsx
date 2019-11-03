@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const ActiveCity = (props) => {
   if (!props.activeCity) {
     return (
-      <div className="active-city">
+      <div className="active-city col-sm-8">
         <p>Select a city...</p>
       </div>
     );
@@ -14,10 +14,10 @@ const ActiveCity = (props) => {
   const url = `https://kitt.lewagon.com/placeholder/cities/${props.activeCity.slug}`;
 
   return (
-    <div className="active-city">
-      <h3>{props.activeCity.name}</h3>
-      <p>{props.activeCity.address}</p>
-      <img src={url} width="100%" />
+    <div className="active-city col-sm-8 p-4 text-center">
+      <h1>{props.activeCity.name}</h1>
+      <h4>{props.activeCity.address}</h4>
+      <img src={url} className="image" />
     </div>
   );
 };

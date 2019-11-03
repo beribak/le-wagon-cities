@@ -13,9 +13,15 @@ class City extends Component {
 
 	render() {
 
+		let style = "card"
+
 		if (this.props.city)
+			if(this.props.city === this.props.selectedCity) {
+				style += " active"
+			}
+
 			return(
-				<div className="card" onClick={this.handleClick} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://kitt.lewagon.com/placeholder/cities/${this.props.city.slug}')` }}>
+				<div className={style} onClick={this.handleClick} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://kitt.lewagon.com/placeholder/cities/${this.props.city.slug}')` }}>
 					<h2>{this.props.city.name}</h2>
 					<h5>{this.props.city.address}</h5>
 				</div>
@@ -31,10 +37,10 @@ function mapDispatchToProps(dispatch) {
 	);
 }
 
-// function mapStateToProps(state) {
-// 	return {
-// 		// city: state.selectedCity
-// 	};
-// }
+function mapStateToProps(state) {
+	return {
+		selectedCity: state.selectedCity
+	};
+}
 
-export default connect(null, mapDispatchToProps)(City);
+export default connect(mapStateToProps, mapDispatchToProps)(City);
